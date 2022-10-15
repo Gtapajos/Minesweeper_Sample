@@ -1,17 +1,18 @@
 //minesweeper game by 101computing.net - www.101computing.et/minesweeper-in-javascript/
 var grid = document.getElementById("grid");
 var testMode = false; //Turn this variable to true to see where the mines are
+
 const date = new Date();
 const day = parseFloat(date.getDate())
 const month = parseFloat(date.getMonth())
-generateGrid();
 
 function generateGrid() {
-  //generate 10 by 10 grid
+  
   grid.innerHTML="";
-  for (var i=0; i<10; i++) {
+
+  for (let i=0; i<10; i++) {
     row = grid.insertRow(i);
-    for (var j=0; j<10; j++) {
+    for (let j = 0; j < 10; j++) {
       cell = row.insertCell(j);
       cell.onclick = function() { clickCell(this); };
       var mine = document.createAttribute("data-mine");       
@@ -23,13 +24,12 @@ function generateGrid() {
 }
 
 function addMines() {
-  //Add mines randomly
-  for (var i=0; i<20; i++) {
+  for (let i = 0; i < 20; i++) {
     var row = Math.floor(Math.random() * 10);
     var col = Math.floor(Math.random() * 10);
     console.log(Math.random())
     var cell = grid.rows[row].cells[col];
-    cell.setAttribute("data-mine","true");
+    cell.setAttribute("data-mine", "true");
     if (testMode) cell.innerHTML="X";
   }
 }
@@ -87,3 +87,5 @@ function clickCell(cell) {
     checkLevelCompletion();
   }
 }
+
+generateGrid();
