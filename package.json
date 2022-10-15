@@ -1,0 +1,23 @@
+{
+  "name": "minnadus-generator",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "game.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gtapajos/Minesweeper_Sample.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gtapajos/Minesweeper_Sample/issues"
+  },
+  "homepage": "https://github.com/Gtapajos/Minesweeper_Sample#readme",
+  "dependencies": {
+    "seedrandom": "^3.0.5"
+  }
+}
